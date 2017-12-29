@@ -349,8 +349,6 @@ int bsdiff(const uint8_t* old, int64_t oldsize, const uint8_t* new, int64_t news
     return result;
 }
 
-#if defined(BSDIFF_EXECUTABLE)
-
 #include <sys/types.h>
 
 #include <bzlib.h>
@@ -421,8 +419,10 @@ int beginDiff(const char* oldfile, const char* newfile, const char* patchfile) {
         err(1, "Failed to write header");
     
     
-    if (NULL == (bz2 = BZ2_bzWriteOpen(&bz2err, pf, 9, 0, 0)))
-        errx(1, "BZ2_bzWriteOpen, bz2err=%d", bz2err);
+    if (NULL == (bz2 = BZ2_bzWriteOpen(&bz2err, pf, 9, 0, 0))) {
+//        errx(1, "BZ2_bzWriteOpen, bz2err=%d", bz2err);
+        return -1;
+    }
     
     stream.opaque = bz2;
     if (bsdiff(old, oldsize, new, newsize, &stream))
@@ -441,6 +441,4 @@ int beginDiff(const char* oldfile, const char* newfile, const char* patchfile) {
     
     return 0;
 }
-
-#endif
 

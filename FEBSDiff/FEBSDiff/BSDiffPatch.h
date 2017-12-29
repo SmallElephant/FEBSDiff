@@ -1,5 +1,5 @@
 //
-//  BSDiff.h
+//  BSDiffPatch.h
 //  FEBSDiff
 //
 //  Created by FlyElephant on 2017/12/29.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BSDiff : NSObject
+@interface BSDiffPatch : NSObject
 
 + (BOOL)bsdiffDiff:(NSString *)origin
              newfile:(NSString *)newfile
