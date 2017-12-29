@@ -16,6 +16,11 @@
 		A82142201FF4C53F00334884 /* FEBSDiffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A821421F1FF4C53F00334884 /* FEBSDiffTests.m */; };
 		A821422B1FF4C53F00334884 /* FEBSDiffUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A821422A1FF4C53F00334884 /* FEBSDiffUITests.m */; };
 		A833EE9C1FF5EDF3000B5365 /* BSDiff.m in Sources */ = {isa = PBXBuildFile; fileRef = A833EE9B1FF5EDF3000B5365 /* BSDiff.m */; };
+		A833EEA21FF62ECB000B5365 /* origin.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = A833EEA01FF62EA0000B5365 /* origin.jsbundle */; };
+		A833EEA31FF62ECB000B5365 /* new.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = A833EEA11FF62EA6000B5365 /* new.jsbundle */; };
+		A833EEA51FF63761000B5365 /* bspatch.c in Sources */ = {isa = PBXBuildFile; fileRef = A82142401FF4CA1800334884 /* bspatch.c */; };
+		A833EEF41FF64792000B5365 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A833EEF31FF64792000B5365 /* libz.tbd */; };
+		A833EEF51FF6479A000B5365 /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A833EEF11FF64786000B5365 /* libbz2.1.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,11 +58,13 @@
 		A821422A1FF4C53F00334884 /* FEBSDiffUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FEBSDiffUITests.m; sourceTree = "<group>"; };
 		A821422C1FF4C53F00334884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A821423D1FF4CA1700334884 /* bspatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bspatch.h; sourceTree = "<group>"; };
-		A821423E1FF4CA1800334884 /* bsdiff.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bsdiff.c; sourceTree = "<group>"; };
-		A821423F1FF4CA1800334884 /* bsdiff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bsdiff.h; sourceTree = "<group>"; };
 		A82142401FF4CA1800334884 /* bspatch.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bspatch.c; sourceTree = "<group>"; };
 		A833EE9A1FF5EDF3000B5365 /* BSDiff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSDiff.h; sourceTree = "<group>"; };
 		A833EE9B1FF5EDF3000B5365 /* BSDiff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSDiff.m; sourceTree = "<group>"; };
+		A833EEA01FF62EA0000B5365 /* origin.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = origin.jsbundle; sourceTree = "<group>"; };
+		A833EEA11FF62EA6000B5365 /* new.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = new.jsbundle; sourceTree = "<group>"; };
+		A833EEF11FF64786000B5365 /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
+		A833EEF31FF64792000B5365 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A833EEF51FF6479A000B5365 /* libbz2.1.0.tbd in Frameworks */,
+				A833EEF41FF64792000B5365 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +101,7 @@
 				A821421E1FF4C53F00334884 /* FEBSDiffTests */,
 				A82142291FF4C53F00334884 /* FEBSDiffUITests */,
 				A82142041FF4C53F00334884 /* Products */,
+				A833EEF01FF64786000B5365 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +118,7 @@
 		A82142051FF4C53F00334884 /* FEBSDiff */ = {
 			isa = PBXGroup;
 			children = (
+				A833EE9F1FF62E85000B5365 /* sources */,
 				A82142381FF4C98500334884 /* bsdiff */,
 				A82142061FF4C53F00334884 /* AppDelegate.h */,
 				A82142071FF4C53F00334884 /* AppDelegate.m */,
@@ -145,12 +156,28 @@
 		A82142381FF4C98500334884 /* bsdiff */ = {
 			isa = PBXGroup;
 			children = (
-				A821423E1FF4CA1800334884 /* bsdiff.c */,
-				A821423F1FF4CA1800334884 /* bsdiff.h */,
 				A82142401FF4CA1800334884 /* bspatch.c */,
 				A821423D1FF4CA1700334884 /* bspatch.h */,
 			);
 			path = bsdiff;
+			sourceTree = "<group>";
+		};
+		A833EE9F1FF62E85000B5365 /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				A833EEA01FF62EA0000B5365 /* origin.jsbundle */,
+				A833EEA11FF62EA6000B5365 /* new.jsbundle */,
+			);
+			path = sources;
+			sourceTree = "<group>";
+		};
+		A833EEF01FF64786000B5365 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A833EEF31FF64792000B5365 /* libz.tbd */,
+				A833EEF11FF64786000B5365 /* libbz2.1.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +286,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A833EEA21FF62ECB000B5365 /* origin.jsbundle in Resources */,
+				A833EEA31FF62ECB000B5365 /* new.jsbundle in Resources */,
 				A82142131FF4C53F00334884 /* LaunchScreen.storyboard in Resources */,
 				A82142101FF4C53F00334884 /* Assets.xcassets in Resources */,
 				A821420E1FF4C53F00334884 /* Main.storyboard in Resources */,
@@ -286,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A833EEA51FF63761000B5365 /* bspatch.c in Sources */,
 				A821420B1FF4C53F00334884 /* ViewController.m in Sources */,
 				A833EE9C1FF5EDF3000B5365 /* BSDiff.m in Sources */,
 				A82142161FF4C53F00334884 /* main.m in Sources */,

@@ -6,9 +6,8 @@
 //  Copyright © 2017年 FlyElephant. All rights reserved.
 //
 
-#import "BSDiff.h"
-#import "bsdiff/bsdiff.h"
-#import "bsdiff/bspatch.h"
+#import  "BSDiff.h"
+#include "bspatch.h"
 
 @implementation BSDiff
 
@@ -23,10 +22,10 @@
     if ([[NSFileManager defaultManager] fileExistsAtPath:patchfile]) {
         [[NSFileManager defaultManager] removeItemAtPath:patchfile error:nil];
     }
-    int err = beginDiff([origin UTF8String], [newfile UTF8String], [patchfile UTF8String]);
-    if (err) {
-        return NO;
-    }
+//    int err = beginDiff([origin UTF8String], [newfile UTF8String], [patchfile UTF8String]);
+//    if (err) {
+//        return NO;
+//    }
     return YES;
 }
 
