@@ -18,9 +18,10 @@
 		A833EE9C1FF5EDF3000B5365 /* BSDiff.m in Sources */ = {isa = PBXBuildFile; fileRef = A833EE9B1FF5EDF3000B5365 /* BSDiff.m */; };
 		A833EEA21FF62ECB000B5365 /* origin.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = A833EEA01FF62EA0000B5365 /* origin.jsbundle */; };
 		A833EEA31FF62ECB000B5365 /* new.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = A833EEA11FF62EA6000B5365 /* new.jsbundle */; };
-		A833EEA51FF63761000B5365 /* bspatch.c in Sources */ = {isa = PBXBuildFile; fileRef = A82142401FF4CA1800334884 /* bspatch.c */; };
 		A833EEF41FF64792000B5365 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A833EEF31FF64792000B5365 /* libz.tbd */; };
 		A833EEF51FF6479A000B5365 /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A833EEF11FF64786000B5365 /* libbz2.1.0.tbd */; };
+		A833EEF81FF64867000B5365 /* bsdiff.c in Sources */ = {isa = PBXBuildFile; fileRef = A833EEF61FF64867000B5365 /* bsdiff.c */; };
+		A833EEFB1FF64883000B5365 /* bspatch.c in Sources */ = {isa = PBXBuildFile; fileRef = A833EEFA1FF64883000B5365 /* bspatch.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,14 +58,16 @@
 		A82142261FF4C53F00334884 /* FEBSDiffUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FEBSDiffUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A821422A1FF4C53F00334884 /* FEBSDiffUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FEBSDiffUITests.m; sourceTree = "<group>"; };
 		A821422C1FF4C53F00334884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A821423D1FF4CA1700334884 /* bspatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bspatch.h; sourceTree = "<group>"; };
-		A82142401FF4CA1800334884 /* bspatch.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bspatch.c; sourceTree = "<group>"; };
 		A833EE9A1FF5EDF3000B5365 /* BSDiff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSDiff.h; sourceTree = "<group>"; };
 		A833EE9B1FF5EDF3000B5365 /* BSDiff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSDiff.m; sourceTree = "<group>"; };
 		A833EEA01FF62EA0000B5365 /* origin.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = origin.jsbundle; sourceTree = "<group>"; };
 		A833EEA11FF62EA6000B5365 /* new.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = new.jsbundle; sourceTree = "<group>"; };
 		A833EEF11FF64786000B5365 /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
 		A833EEF31FF64792000B5365 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A833EEF61FF64867000B5365 /* bsdiff.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bsdiff.c; sourceTree = "<group>"; };
+		A833EEF71FF64867000B5365 /* bsdiff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bsdiff.h; sourceTree = "<group>"; };
+		A833EEF91FF64883000B5365 /* bspatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bspatch.h; sourceTree = "<group>"; };
+		A833EEFA1FF64883000B5365 /* bspatch.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bspatch.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +159,10 @@
 		A82142381FF4C98500334884 /* bsdiff */ = {
 			isa = PBXGroup;
 			children = (
-				A82142401FF4CA1800334884 /* bspatch.c */,
-				A821423D1FF4CA1700334884 /* bspatch.h */,
+				A833EEFA1FF64883000B5365 /* bspatch.c */,
+				A833EEF91FF64883000B5365 /* bspatch.h */,
+				A833EEF61FF64867000B5365 /* bsdiff.c */,
+				A833EEF71FF64867000B5365 /* bsdiff.h */,
 			);
 			path = bsdiff;
 			sourceTree = "<group>";
@@ -315,11 +320,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A833EEA51FF63761000B5365 /* bspatch.c in Sources */,
 				A821420B1FF4C53F00334884 /* ViewController.m in Sources */,
 				A833EE9C1FF5EDF3000B5365 /* BSDiff.m in Sources */,
 				A82142161FF4C53F00334884 /* main.m in Sources */,
 				A82142081FF4C53F00334884 /* AppDelegate.m in Sources */,
+				A833EEF81FF64867000B5365 /* bsdiff.c in Sources */,
+				A833EEFB1FF64883000B5365 /* bspatch.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
