@@ -14,7 +14,7 @@
              newfile:(NSString *)newfile
       patchfile:(NSString *)patchfile;
 
-+ (BOOL)bsdiffPatch:(NSString *)patch
++ (BOOL)beginPatch:(NSString *)patch
              origin:(NSString *)origin
       toDestination:(NSString *)destination;
 

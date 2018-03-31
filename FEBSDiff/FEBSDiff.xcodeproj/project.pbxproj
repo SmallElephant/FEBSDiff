@@ -22,6 +22,8 @@
 		A833EEF51FF6479A000B5365 /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A833EEF11FF64786000B5365 /* libbz2.1.0.tbd */; };
 		A833EEF81FF64867000B5365 /* bsdiff.c in Sources */ = {isa = PBXBuildFile; fileRef = A833EEF61FF64867000B5365 /* bsdiff.c */; };
 		A833EEFB1FF64883000B5365 /* bspatch.c in Sources */ = {isa = PBXBuildFile; fileRef = A833EEFA1FF64883000B5365 /* bspatch.c */; };
+		A83E7926206F87A8009A7439 /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = A83E7925206F8799009A7439 /* index.ios.jsbundle */; };
+		A83E7927206F87A8009A7439 /* patch.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = A83E7924206F8799009A7439 /* patch.ios.jsbundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		A833EEF71FF64867000B5365 /* bsdiff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bsdiff.h; sourceTree = "<group>"; };
 		A833EEF91FF64883000B5365 /* bspatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bspatch.h; sourceTree = "<group>"; };
 		A833EEFA1FF64883000B5365 /* bspatch.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bspatch.c; sourceTree = "<group>"; };
+		A83E7924206F8799009A7439 /* patch.ios.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = patch.ios.jsbundle; sourceTree = "<group>"; };
+		A83E7925206F8799009A7439 /* index.ios.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = index.ios.jsbundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 				A82142381FF4C98500334884 /* bsdiff */,
 				A82142061FF4C53F00334884 /* AppDelegate.h */,
 				A82142071FF4C53F00334884 /* AppDelegate.m */,
+				A83E7925206F8799009A7439 /* index.ios.jsbundle */,
+				A83E7924206F8799009A7439 /* patch.ios.jsbundle */,
 				A833EE9A1FF5EDF3000B5365 /* BSDiffPatch.h */,
 				A833EE9B1FF5EDF3000B5365 /* BSDiffPatch.m */,
 				A82142091FF4C53F00334884 /* ViewController.h */,
@@ -291,6 +297,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A83E7926206F87A8009A7439 /* index.ios.jsbundle in Resources */,
+				A83E7927206F87A8009A7439 /* patch.ios.jsbundle in Resources */,
 				A833EEA21FF62ECB000B5365 /* origin.jsbundle in Resources */,
 				A833EEA31FF62ECB000B5365 /* new.jsbundle in Resources */,
 				A82142131FF4C53F00334884 /* LaunchScreen.storyboard in Resources */,

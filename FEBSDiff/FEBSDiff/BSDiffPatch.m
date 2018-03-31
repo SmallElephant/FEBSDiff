@@ -20,8 +20,8 @@
         return NO;
     }
     
-    if ([[NSFileManager defaultManager] fileExistsAtPath:patchfile]) {
-        [[NSFileManager defaultManager] removeItemAtPath:patchfile error:nil];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:patchfile]) {
+        [[NSFileManager defaultManager] createFileAtPath:patchfile contents:nil attributes:nil];
     }
     int err = beginDiff([origin UTF8String], [newfile UTF8String], [patchfile UTF8String]);
     if (err) {
@@ -30,7 +30,7 @@
     return YES;
 }
 
-+ (BOOL)bsdiffPatch:(NSString *)patch
++ (BOOL)beginPatch:(NSString *)patch
              origin:(NSString *)origin
       toDestination:(NSString *)destination
 {
